@@ -1,0 +1,40 @@
+.titlecontent {
+    padding: 10px;
+    height: 96px;
+    text-align: center;
+    /* background-color: blue; */
+    color: white;
+    border-style: none none groove none;
+}
+
+.maincontent {
+    background-color: black;
+    width: 210px;
+    height: 100vh;
+}
+
+.listitem {
+    /* background-color: blueviolet; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.listitem div li {
+    border: 1px groove rgb(136, 136, 136);
+    width: 81%;
+    padding: 14px;
+    margin: 4px;
+    display: inline-block;
+    text-align: center;
+    color: white;
+}
+
+.footercontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+    padding: 16px;
+    color: white;
+    border-style: groove none none none;
+}
