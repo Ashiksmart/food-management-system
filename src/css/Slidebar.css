@@ -4,13 +4,16 @@
     text-align: center;
     /* background-color: blue; */
     color: white;
-    border-style: none none groove none;
 }
 
 .maincontent {
-    background-color: black;
-    width: 210px;
+    background-color: darkslategray;
+    width: 0;
+    position: absolute;
+    left: 0;
     height: 100vh;
+    z-index: 1;
+    overflow-x: hidden;
 }
 
 .listitem {
@@ -19,22 +22,40 @@
     margin-bottom: 10px;
 }
 
-.listitem div li {
+.listitem div div  {
     border: 1px groove rgb(136, 136, 136);
-    width: 81%;
-    padding: 14px;
+    padding: 6px;
     margin: 4px;
-    display: inline-block;
-    text-align: center;
+    display: flex;
     color: white;
+    align-items: center;
+    flex-direction: row;
+    height: 40px;
+
+    
 }
+
+.listitem div div box-icon {
+    position: relative;
+    left: 14px;
+}
+
+.listitem div div h5 {
+    left: 38px;
+    position: relative;
+    letter-spacing: 3px;
+}
+
 
 .footercontent {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     height: auto;
-    padding: 16px;
+    padding: 4px;
     color: white;
-    border-style: groove none none none;
+}
+
+footer {
+    padding: 10px;
 }

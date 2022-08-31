@@ -1,0 +1,17 @@
+.mainContainer {
+    background-color: darkslategray;
+}
+
+.mainContainer div  {
+    width: auto;
+    height: 95px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+}
+/* 
+.mainContainer div div box-icon {
+background-color: aqua;
+size: 20px;
+} */
