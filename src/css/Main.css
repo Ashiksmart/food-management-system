@@ -1,14 +1,12 @@
+
 .mainContainer {
-    background-color: darkslategray;
+    width: auto;
+    display: flex;
+    margin-left: 210px;
 }
 
-.mainContainer div  {
-    width: auto;
-    height: 95px;
-    color: white;
-    display: flex;
-    align-items: center;
-    padding-left: 24px;
+body {
+    background-color: #455a5a;
 }
 /* 
 .mainContainer div div box-icon {

@@ -8,7 +8,7 @@
 
 .maincontent {
     background-color: darkslategray;
-    width: 0;
+    width: 210px;
     position: absolute;
     left: 0;
     height: 100vh;
@@ -27,20 +27,31 @@
     padding: 6px;
     margin: 4px;
     display: flex;
-    color: white;
     align-items: center;
     flex-direction: row;
     height: 40px;
-
-    
 }
 
+a:link,a:visited {
+    color: #fff;
+    padding: 6px;
+    padding-left: 0px;
+    height: 78%;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+a:hover,a:active{
+    background-color:#455a5a;
+}
 .listitem div div box-icon {
     position: relative;
     left: 14px;
 }
 
-.listitem div div h5 {
+h5 {
     left: 38px;
     position: relative;
     letter-spacing: 3px;

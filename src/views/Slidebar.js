@@ -1,11 +1,12 @@
 import '../css/Slidebar.css';
 import 'boxicons';
+import { Link ,Outlet} from 'react-router-dom';
 
 function Slidebar(props) {
 
     return (
-
-        <nav style={{  width: props.width }} className='maincontent'>
+<>
+        <nav className='maincontent'>
 
             <header className="titlecontent">
                 <h3>
@@ -16,36 +17,57 @@ function Slidebar(props) {
             <div className='listitem'>
                 <div>
                     <div>
-                        <box-icon name='dashboard' type='solid' color='#ffffff' ></box-icon>
-                        <h5> Dashboard</h5>
+                        <Link to="/">
+                            <box-icon name='dashboard' type='solid' color='#ffffff' ></box-icon>
+                            <h5>
+                                Dashboard
+                            </h5></Link>
                     </div>
                     <div>
-                    <box-icon type='solid' name='bowl-rice' color='#ffffff' ></box-icon>
-                        <h5> Foods</h5>
+                        <Link to="foods">
+                            <box-icon type='solid' name='bowl-rice' color='#ffffff' ></box-icon>
+                            <h5> Foods</h5>
+                        </Link>
                     </div>
                     <div>
-                    <box-icon name='heart-circle' color='#ffffff' ></box-icon>
-                        <h5> Favourite</h5>
+                        <Link to="favourite">
+                            <box-icon name='heart-circle' color='#ffffff' ></box-icon>
+                            <h5> Favourite</h5>
+                        </Link>
+
                     </div>
                     <div>
-                    <box-icon name='report' type='solid' color='#ffffff' ></box-icon>
-                        <h5> Reports</h5>
+                        <Link to="reports">
+                            <box-icon name='report' type='solid' color='#ffffff' ></box-icon>
+                            <h5> Reports</h5>
+                        </Link>
                     </div>
                     <div>
-                    <box-icon name='user-detail' type='solid' color='#ffffff' ></box-icon>
-                        <h5> Profile</h5>
+                        <Link to="profile">
+                            <box-icon name='user-detail' type='solid' color='#ffffff' ></box-icon>
+                            <h5> Profile</h5>
+                        </Link>
+
                     </div>
                     <div>
-                    <box-icon name='history' color='#ffffff' ></box-icon>
-                        <h5> Order History</h5>
+                        <Link to="order_history">
+                            <box-icon name='history' color='#ffffff' ></box-icon>
+                            <h5> Order History</h5>
+                        </Link>
                     </div>
                     <div>
-                        <box-icon name='notification' type='solid' color='#ffffff' ></box-icon>
-                        <h5> Notification</h5>
+                        <Link to="notification">
+                            <box-icon name='notification' type='solid' color='#ffffff' ></box-icon>
+                            <h5> Notification</h5>
+                        </Link>
+
                     </div>
                     <div>
-                    <box-icon name='jquery' type='logo' color='#ffffff' ></box-icon>
-                        <h5> Settings</h5>
+                        <Link to="settings">
+                            <box-icon name='jquery' type='logo' color='#ffffff' ></box-icon>
+                            <h5> Settings</h5>
+                        </Link>
+
                     </div>
                 </div>
             </div>
@@ -60,8 +82,10 @@ function Slidebar(props) {
 
                 </div>
             </footer>
-
+           
         </nav>
+         <Outlet />
+         </>
     )
 }
 

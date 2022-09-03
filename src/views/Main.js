@@ -1,40 +1,31 @@
 import React from "react";
 import '../css/Main.css'
 import Slidebar from "./Slidebar";
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import Blogs from "./pages/Foods";
 
 class main extends React.Component {
-    constructor() {
-        super();
-        this.state = {"slidebar" : true}
-    }
 
 render() {
     return (
         <>
-            
-            
-            <Slidebar width={this.state.slidebar ? 210+"px" : 0 }/>
-       
+
+        <BrowserRouter>
+        <Routes>
+            <Route path="/" element={ <Slidebar/>}>
+            <Route index element={ <Dashboard/>}/>
+            <Route path="foods" element={ <Dashboard/>}/>
+            <Route path="favourite" element={ <Dashboard/>}/>
+            <Route path="reports" element={ <Dashboard/>}/>
+            <Route path="profile" element={ <Dashboard/>}/>
+            <Route path="order_history" element={ <Dashboard/>}/>
+            <Route path="notification" element={ <Dashboard/>}/>
+            <Route path="settings" element={ <Dashboard/>}/>
+            </Route>
+        </Routes>
+        </BrowserRouter>
       
-            <div>
-                <main style={{"margin-left" : this.state.slidebar && 210+"px"}} className="mainContainer">
-                   <div>
-                    <div onClick={()=>{
-                        this.setState({
-                            "slidebar" : !this.state.slidebar
-                        })
-                    }}>
-                        {
-                            this.state.slidebar ? <box-icon name='chevrons-left' type='solid' color='#ffffff' ></box-icon>:<box-icon name='chevrons-right' type='solid' color='#ffffff' ></box-icon>
-                        }
-                    
-                    </div>
-            
-                <h3>Dashboard {this.state.slidebar.toString()}</h3>
-                   </div>
-                </main>
-                
-            </div>
         </>
     )
 }
